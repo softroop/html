@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href="index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <title>Купить Масло, с доставкой.</title>
+</head>
+<body>
+  <script>
+        var colorArray = ["#5A9C6E", "#A8BF5A", "#FAC46E", "#FAD5BB", "#F2FEFF"]; // создаем массив с цветами фона
+    var i = 0; 
+    
+    function changeColor(){
+       alert("На этом сайте вы можете заказать конопляное масло!"); 
+        document.body.style.background = colorArray[i]; 
+        i++;
+        if( i > colorArray.length - 1){
+            i = 0;
+        }
+    }
+    </script>
+    <div class="form-wrap">
+    <div class="profile"><img src="https://img01.kupiprodai.ru/032021/1615625408893.jpg" width="150px">
+      <h1>Сумма заказа составит:</h1>
+    </div>
+    <form method="post" action="form.php">
+      <div>
+        <label for="name">Фамилия Имя Отчество</label>
+        <input type="text" name="name" required>
+      </div>
+      <div class="radio">
+        <span>Объем:</span>
+        <label>
+          <input type="radio" name="sex" value="Мужской">100 ml.
+          <div class="radio-control male"></div>
+        </label>
+        <label>
+          <input type="radio" name="sex" value="Мужской">200 ml.
+          <div class="radio-control male"></div>
+        </label>
+        <label>
+          <input type="radio" name="sex" value="Женский">250 ml.
+          <div class="radio-control female"></div>
+        </label>
+        <label>
+          <input type="radio" name="sex" value="Женский">500 ml..
+          <div class="radio-control female"></div>
+        </label>
+      </div>
+      <div>
+        <label for="email-addres">E-mail</label>
+        <input type="email-addres" name="email-addres" required>
+      </div>
+      <div>
+        <label for="email-addres">Введите адрес доставки</label>
+        <input type="email-addres" name="email-addres" required>
+      </div>
+      <div>
+        <label for="country">Страна</label>
+        <select name="country">
+          <option>Выберите страну доставки.</option>
+          <option value="Россия">Russia</option> 
+          <option value="Украина">Ukraine</option> 
+          <option value="Беларусь">Belorus</option> 
+        </select> 
+        <div class="select-arrow"></div> 
+      </div> 
+      <button type="submit">Отправить</button>
+      <button onclick="changeColor();">Сменить фон</button> 
+    </form> 
+  </div>
+</body>
+</html>
